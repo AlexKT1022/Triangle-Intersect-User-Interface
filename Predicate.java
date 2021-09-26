@@ -39,7 +39,7 @@ public class Predicate {
             return true;
         else if ( Between ( a, b, c) || Between (a, b, d) || Between (c, d, a) || Between (c, d, b))
             return true;
-        return true;
+        return false;
     }
     public static int Area2(Vertex a, Vertex b, Vertex c)
     {
