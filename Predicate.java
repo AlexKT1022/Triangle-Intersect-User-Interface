@@ -43,7 +43,7 @@ public class Predicate {
     }
     public static int Area2(Vertex a, Vertex b, Vertex c)
     {
-        return ((b.x - a.x) * (c.x - a.y) - (c.x - a.x) * (b.y - a.y));
+        return ((b.x - a.x) * (c.y - a.y) - (c.x - a.x) * (b.y - a.y));
     }
     public static boolean Xor( boolean x, boolean y )
     {
