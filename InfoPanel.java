@@ -20,13 +20,17 @@ public class InfoPanel extends JPanel implements MouseListener {
      */
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
+
         g.setFont(g.getFont().deriveFont(Font.BOLD));
+
         Font currentFont = g.getFont();
         Font newFont = currentFont.deriveFont(currentFont.getSize() * 1.4F);
+
         g.setFont(newFont);
+
         String str = "Phase:";
-        switch (Main.phase)
-        {
+
+        switch (Main.phase) {
             case DRAW:
                 str += "Left Click to Add Vertices, Right Click to Remove!";
                 break;
@@ -34,6 +38,7 @@ public class InfoPanel extends JPanel implements MouseListener {
                 str += "Let's see if your algorithm got it right!";
                 break;
         }
+
         g.drawString(str, 30,55);
         g.setColor(new Color(100,100,200));
         g.fillRect(700,25,130,50);

@@ -6,10 +6,9 @@ public class Edge {
      * @param start the first vertex
      * @param end the second vertex
      */
-    public Edge(Vertex start, Vertex end)
-    {
+    public Edge(Vertex start, Vertex end) {
         this.start = start;
-        this.end=end;
+        this.end = end;
     }
 
     /**
@@ -18,11 +17,13 @@ public class Edge {
      * @param end end vertex
      * @return the edge from start to end
      */
-    public static Edge polygonalEdge(Vertex start, Vertex end)
-    {
+    public static Edge polygonalEdge(Vertex start, Vertex end) {
         Edge edge = new Edge(start,end);
+
         start.setNext(end);
+
         end.setPrev(start);
+
         return edge;
     }
 
@@ -31,8 +32,7 @@ public class Edge {
      * @param vertex the vertex in question
      * @return true if an edge has a vertex as its start or end, false otherwise
      */
-    public boolean contains(Vertex vertex)
-    {
+    public boolean contains(Vertex vertex) {
         return start.equals(vertex) || end.equals(vertex);
     }
 
@@ -47,11 +47,11 @@ public class Edge {
     /**
      * Inverts which is the start and end vertices
      */
-    public void invert()
-    {
+    public void invert() {
         Vertex temp = start;
+
         start = end;
-        end =temp;
+        end = temp;
     }
 
     @Override

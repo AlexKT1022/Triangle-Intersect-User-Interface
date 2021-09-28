@@ -14,8 +14,7 @@ public class SimplePolygon {
      * Constructs a SimplePolygon from an array of vertices
      * @param vertices the vertices of the polygon
      */
-    public SimplePolygon(Vertex[] vertices)
-    {
+    public SimplePolygon(Vertex[] vertices) {
         this.vertices = new ArrayList<>();
         this.edges = new ArrayList<>();
         Collections.addAll(this.vertices, vertices);
@@ -36,12 +35,12 @@ public class SimplePolygon {
         }
         clockwise = left(lowest.getCoordsArr(),lowest.getPrev().getCoordsArr(),lowest.getNext().getCoordsArr());
     }
+
     /**
      * Constructs a SimplePolygon from a list of vertices
      * @param vertices the vertices of the polygon
      */
-    public SimplePolygon(ArrayList<Vertex> vertices)
-    {
+    public SimplePolygon(ArrayList<Vertex> vertices) {
         this.vertices = new ArrayList<>(vertices);
         this.edges = new ArrayList<>();
         for (int i = 0; i < this.vertices.size(); i++)
